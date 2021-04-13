@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { addBook, deleteBook } from "./reducers/rootReducer";
 
 export default function App() {
-  const books = useSelector((state) => state.books);
+  const book = useSelector((state) => state.books.find(book => book.id === 1).name);
 
   const dispatch = useDispatch();
 
-  return <div>{books}</div>;
+  return <div class="container">{book}</div>;
 }

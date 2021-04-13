@@ -7,6 +7,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import App from "./App.jsx";
 import rootReducer from "./reducers/rootReducer";
 
+import './styles/index.less';
+
 const store = configureStore({
   reducer: rootReducer,
   devTools: true,

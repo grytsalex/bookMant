@@ -20,9 +20,13 @@ module.exports = {
     port: 3000,
     hot: true,
     liveReload: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
+    alias: {
+      '@': path.resolve(__dirname, 'src/'),
+    }
   },
   devtool: "inline-source-map",
   module: {
@@ -41,6 +45,27 @@ module.exports = {
           loader: "html-loader",
         },
       },
+      { 
+        test: /\.(?:le|c)ss$/,
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: require.resolve('less-loader'),
+            options: {
+              lessOptions: {
+                javascriptEnabled: true
+              }
+            }
+          }
+        ]
+       
+      }
     ],
   },
 };

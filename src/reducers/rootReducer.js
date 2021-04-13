@@ -13,9 +13,7 @@ const rootReducer = createSlice({
       return state.books.push(action.payload);
     },
     deleteBook: (state, action) => {
-      return state.books.findIndex((book) => {
-        return book.id === action.payload.id;
-      });
+      return state.books.filter((book) => book.id !== id);
     },
   },
 });
