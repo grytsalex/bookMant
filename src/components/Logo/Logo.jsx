@@ -9,10 +9,7 @@ export const Logo = () => {
   return (
     <>
       <Box mr={2}>
-        <MenuBookTwoToneIcon
-         className={classes.logos}
-          // fontSize="large"
-           />
+        <MenuBookTwoToneIcon className={classes.logos}/>
       </Box>
       <Typography variant="h3" className={classes.title}>Books read in 2021</Typography>
     </>
