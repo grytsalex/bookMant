@@ -6,8 +6,8 @@ import { Logo } from "./components/Logo";
 import { Table } from "./components/Table";
 
 export default function App() {
-  const book = useSelector(
-    (state) => state.books.find((book) => book.id === 1).name
+  const books = useSelector(
+    (state) => state.books
   );
 
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export default function App() {
         </div>
       </div>
       <div className="main-table">
-        <Table />
+        <Table books={books} />
       </div>
       <div className="footer">Footer...</div>
     </div>

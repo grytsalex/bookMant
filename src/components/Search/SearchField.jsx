@@ -1,9 +1,6 @@
 import React from "react";
 import { useStyles } from "../../styles";
-import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
+import { Paper, InputBase, Divider, IconButton }   from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
 export const SearchField = () => {

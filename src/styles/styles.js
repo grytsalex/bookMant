@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme) => {
+  return {
     root: {
       padding: '2px 4px',
       display: 'flex',
@@ -19,4 +20,10 @@ export const useStyles = makeStyles((theme) => ({
       height: 28,
       margin: 4,
     },
-}));
+    logos: {
+      fontSize: '48px !important',
+    },
+    title: {
+      color: '#DDDDDD',
+    }
+}});

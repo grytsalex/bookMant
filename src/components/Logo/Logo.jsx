@@ -1,12 +1,20 @@
 import React from "react";
 import MenuBookTwoToneIcon from "@material-ui/icons/MenuBookTwoTone";
-import Typography from "@material-ui/core/Typography";
+import { Typography, Box } from "@material-ui/core";
+import { useStyles } from "../../styles"
 
-export const Logo = () => (
-  <>
-    <MenuBookTwoToneIcon fontSize="large" />
-    <Typography variant="h4" component="h3">
-      Books read in 2021
-    </Typography>
-  </>
-);
+export const Logo = () => {
+  const classes = useStyles();
+
+  return (
+    <>
+      <Box mr={2}>
+        <MenuBookTwoToneIcon
+         className={classes.logos}
+          // fontSize="large"
+           />
+      </Box>
+      <Typography variant="h3" className={classes.title}>Books read in 2021</Typography>
+    </>
+  );
+};
