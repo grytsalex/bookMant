@@ -25,5 +25,19 @@ export const useStyles = makeStyles((theme) => {
     },
     title: {
       color: '#DDDDDD',
+      lineHeight: "70% !important",
+    }, 
+    cardMedia: {
+      paddingTop: "56.25%",
+    },
+    cards: {
+      justifyContent: 'space-between',
+      maxWidth: '1280px'
+    },
+    cardContent: {
+      flexGrow: 1,
+    },
+    cardGrid: {
+      marginTop: theme.spacing(4)
     }
 }});
