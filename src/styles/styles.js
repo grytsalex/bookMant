@@ -17,7 +17,7 @@ export const useStyles = makeStyles((theme) => {
       padding: 10,
     },
     divider: {
-      height: 28,
+      height: '28px !important',
       margin: 4,
     },
     logos: {
@@ -39,5 +39,8 @@ export const useStyles = makeStyles((theme) => {
     },
     cardGrid: {
       marginTop: theme.spacing(4)
+    },
+    cardActions: {
+      justifyContent: 'space-between'
     }
 }});

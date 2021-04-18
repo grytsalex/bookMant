@@ -37,7 +37,7 @@ export const Table = ({ books }) => {
                   Text
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardActions className={classes.cardActions}>
                 <Button size="small" color="primary">
                   View
                 </Button>
