@@ -1,9 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addBook, deleteBook } from "./reducers/rootReducer";
+// import { addBook, deleteBook } from "./reducers/rootReducer";
 import { SearchField } from "./components/Search";
 import { Logo } from "./components/Logo";
 import { Table } from "./components/Table";
+import { AboutFooter } from "./components/About";
 
 export default function App() {
   const books = useSelector(
@@ -25,7 +26,9 @@ export default function App() {
       <div className="main-table">
         <Table books={books} />
       </div>
-      <div className="footer">Footer...</div>
+      <div className="footer">
+        <AboutFooter/>
+      </div>
     </div>
   );
 }
