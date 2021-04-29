@@ -42,5 +42,30 @@ export const useStyles = makeStyles((theme) => {
     },
     cardActions: {
       justifyContent: 'space-between'
+    },
+    footerNavigation: {
+      backgroundColor: 'transparent !important',
+      display: 'flex',
+      alignItems: 'center'
+    },
+    footerWrapper: {
+      display: 'flex !important',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    aboutIcons: {
+      color: '#212529 !important',
+      minWidth: '2rem !important',
+      '&:hover': {
+        color: '#823eb7 !important',
+      }
+    },
+    footerText: {
+      textTransform: 'uppercase',
+    },
+    links: {
+      display: 'inline-block !important',
+      height: 'fit-content !important',
+      marginLeft: '20px !important',
     }
 }});

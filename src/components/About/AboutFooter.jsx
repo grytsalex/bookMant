@@ -4,11 +4,12 @@ import {
   BottomNavigationAction,
   BottomNavigation,
   Container,
+  Link,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TwitterIcon from "@material-ui/icons/Twitter";
-  import LinkedInIcon from "@material-ui/icons/LinkedIn";
-  import FacebookIcon from "@material-ui/icons/Facebook";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FacebookIcon from "@material-ui/icons/Facebook";
 import { useStyles } from "../../styles";
 
 export const AboutFooter = () => {
@@ -16,36 +17,57 @@ export const AboutFooter = () => {
   const classes = useStyles();
 
   return (
-    <Container>
-      <Typography variant="h5">Text here...</Typography>
+    <Container className={classes.footerWrapper}>
+      <Typography variant="h5" className={classes.footerText}>
+        © Aleksandr Hrytsenko
+      </Typography>
       <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
-        showLabels={false}
-        className={classes.footer}
+        className={classes.footerNavigation}
       >
-        <BottomNavigationAction
-          value="facebook"
-          label="Facebook"
-          icon={<FacebookIcon />}
-        />
-        <BottomNavigationAction
-          value="linkedin"
-          label="LinkedIn"
-          icon={<LinkedInIcon />}
-        />
-        <BottomNavigationAction
-          value="github"
-          label="GitHub"
-          icon={<GitHubIcon />}
-        />
-        <BottomNavigationAction
-          value="twitter"
-          label="Twitter"
-          icon={<TwitterIcon />}
-        />
+        <Link
+          className={classes.links}
+          href="https://www.facebook.com/grytsalex"
+        >
+          <BottomNavigationAction
+            value="facebook"
+            icon={<FacebookIcon fontSize="large" />}
+            className={classes.aboutIcons}
+          />
+        </Link>
+        <Link
+          className={classes.links}
+          href="https://www.linkedin.com/in/aleksandrgrytsenko1996/"
+        >
+          <BottomNavigationAction
+            value="linkedin"
+            icon={<LinkedInIcon fontSize="large" />}
+            className={classes.aboutIcons}
+          />
+        </Link>
+        <Link
+          className={classes.links}
+          href="https://github.com/grytsalex"
+        >
+          <BottomNavigationAction
+            value="github"
+            icon={<GitHubIcon fontSize="large" />}
+            className={classes.aboutIcons}
+          />
+        </Link>
+        <Link
+          className={classes.links}
+          href="https://twitter.com/alkatras0704"
+        >
+          <BottomNavigationAction
+            value="twitter"
+            icon={<TwitterIcon fontSize="large" />}
+            className={classes.aboutIcons}
+          />
+        </Link>
       </BottomNavigation>
     </Container>
   );
